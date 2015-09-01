@@ -43,7 +43,7 @@ var Script = function () {
 
             if (wSize > 768) {
                 $('#container').removeClass('sidebar-close');
-                $('#sidebar > ul').show();
+                $('#sidebar > ul').fadeIn(300);
             }
         }
         $(window).on('load', responsiveView);
@@ -64,7 +64,8 @@ var Script = function () {
             $('#main-content').css({
                 'margin-left': '210px'
             });
-            $('#sidebar > ul').show();
+            $('#main-content').fadeIn(300);
+            $('#sidebar > ul').fadeIn(300);
             $('#sidebar').css({
                 'margin-left': '0'
             });

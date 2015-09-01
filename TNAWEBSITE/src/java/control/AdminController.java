@@ -31,7 +31,13 @@ public class AdminController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String ac = request.getParameter("action");
-        
+        if ("adminLogin".equals(ac)) {
+            String name = request.getParameter("admName");
+            String pass = request.getParameter("admPw");
+            if (checkLogin(name, pass)) {
+                response.sendRedirect("blank.html");
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -74,6 +80,7 @@ public class AdminController extends HttpServlet {
     }// </editor-fold>
 
     public boolean checkLogin(String user, String pass) {
+        //code tự sướng
         return "admin".equals(user) && "admin".equals(pass);
     }
 }

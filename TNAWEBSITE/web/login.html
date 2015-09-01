@@ -9,7 +9,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Lock Screen</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,14 +35,15 @@
 
 
         <div class="lock-box text-center">
-            <img src="img/follower-avatar.jpg" alt="lock avatar"/>
-            <h1>Jonathan Smith</h1>
-            <span class="locked">Locked</span>
-            <form role="form" class="form-inline" action="index.html">
-                <div class="form-group col-lg-12">
-                    <input type="password" placeholder="Password" id="exampleInputPassword2" class="form-control lock-input">
-                    <button class="btn btn-lock" type="submit">
-                        <i class="fa fa-arrow-right"></i>
+            
+            <form role="form" method="POST" action="AdminController?action=adminLogin" class="form-inline">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" name="admName" class="form-control" style="margin-top: 10px;">
+                    <br/>
+                    <input type="password" placeholder="Password" name="admPw" class="form-control" style="margin-top: 10px;">
+                    <br/>
+                    <button class="btn btn-lock" type="submit" style="margin-top: 10px;">
+                        <i class="fa fa-arrow-right" ><font style="font-family: 'Open Sans', sans-serif;"> Login</font></i>
                     </button>
                 </div>
             </form>
